@@ -3,7 +3,7 @@ import './App.css';
 import TodoList from './components/todo_list'
 import TodoStore from "./stores/todo";
 
-const todoStore = new TodoStore();
+const todoStore = TodoStore.create({todos:[]});
 
 class App extends Component {
   render() {

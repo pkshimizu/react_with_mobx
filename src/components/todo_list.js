@@ -46,12 +46,12 @@ class TodoView extends React.Component {
 
   onToggleCompleted = () => {
     const todo = this.props.todo;
-    todo.completed = !todo.completed;
+    todo.toggleCompleted();
   };
 
   onRename = () => {
     const todo = this.props.todo;
-    todo.task = prompt('Task name', todo.task) || todo.task;
+    todo.updateTask(prompt('Task name', todo.task) || todo.task);
   };
 }
 
